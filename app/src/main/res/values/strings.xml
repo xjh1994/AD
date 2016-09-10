@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AD</string>
+    <string name="action_settings">设置</string>
+
+    <string name="home">首页</string>
+    <string name="toast_not_login">请先登录</string>
+    <string name="dialog_offline">下线通知</string>
+    <string name="relogin">重新登录</string>
+    <string name="exit">退出</string>
+
+    <string name="login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="openning_qq">正在打开QQ...</string>
+    <string name="start_location">开始定位</string>
+    <string name="stop_location">停止定位</string>
+    <string name="location">定位</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="register">注册</string>
+    <string name="toast_register_success">注册成功</string>
+    <string name="username_or_password_cannot_be_empty">用户名或密码不能为空哦</string>
+</resources>

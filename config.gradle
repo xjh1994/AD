@@ -1,0 +1,35 @@
+def supportVersion = "24.2.0"
+
+ext {
+
+    versions = [
+            "compileSdkVersion": 24,
+            "buildToolsVersion": "23.0.1",
+            "minSdkVersion"    : 15,
+            "targetSdkVersion" : 24,
+    ]
+
+    dependencies = [
+            "appcompat"            : "com.android.support:appcompat-v7:${supportVersion}",
+            "support"              : "com.android.support:support-v4:${supportVersion}",
+            "design"               : "com.android.support:design:${supportVersion}",
+            "recyclerview-v7"      : "com.android.support:recyclerview-v7:${supportVersion}",
+            "butterknife"          : "com.jakewharton:butterknife:7.0.1",   //注解 https://github.com/JakeWharton/butterknife
+            "rxjava"               : "io.reactivex:rxjava:1.1.6",   //RxJava https://github.com/ReactiveX/RxJava, http://gank.io/post/560e15be2dca930e00da1083
+            "rxandroid"            : "io.reactivex:rxandroid:1.2.1",     //RxAndroid https://github.com/ReactiveX/RxAndroid
+            "retrofit"             : "com.squareup.retrofit2:retrofit:2.1.0",    //Retrofit https://github.com/square/retrofit, http://gank.io/post/56e80c2c677659311bed9841
+            "converter-gson"       : "com.squareup.retrofit2:converter-gson:2.1.0",
+            "converter-rxjava"     : "com.squareup.retrofit2:adapter-rxjava:2.1.0",
+            "converter-scalars"    : "com.squareup.retrofit2:converter-scalars:2.1.0",
+            "eventbus3"            : "org.greenrobot:eventbus:3.0.0",   // https://github.com/greenrobot/EventBus
+            "logger"               : "com.orhanobut:logger:1.15",   //日志 https://github.com/orhanobut/logger
+            "gson"                 : "com.google.code.gson:gson:2.2.4", //Gson https://github.com/google/gson/blob/master/UserGuide.md
+            "picasso"              : "com.squareup.picasso:picasso:2.5.2",   //picasso https://github.com/square/picasso
+            "FlycoTabLayout_Lib"   : "com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar", //Tab导航布局 https://github.com/H07000223/FlycoTabLayout
+            "RecyclerViewHelper"   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.0.0",  //RecyclerAdapter辅助类 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+            "SwipeBackLayout"      : "me.imid.swipebacklayout.lib:library:1.0.0", //SwipeBackLayout https://github.com/ikew0ng/SwipeBackLayout
+            "MaterialEditText"     : "com.rengwuxian.materialedittext:library:2.1.4",    //MaterialEditText https://github.com/rengwuxian/MaterialEditText
+            "MaterialDesignLibrary": "com.github.navasmdc:MaterialDesign:1.5@aar",  //MaterialDesignLibrary https://github.com/navasmdc/MaterialDesignLibrary
+    ]
+}
+
