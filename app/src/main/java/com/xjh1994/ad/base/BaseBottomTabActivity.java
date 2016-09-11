@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * Created by Administrator on 2016/9/6.
  */
 
-public abstract class BaseTabActivity extends BaseActivity {
+public abstract class BaseBottomTabActivity extends BaseActivity {
 
     private ArrayList<Fragment> mFragments = new ArrayList<>();
 
@@ -28,7 +28,7 @@ public abstract class BaseTabActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_base_tab;
+        return R.layout.activity_base_bottom_tab;
     }
 
     @Override

@@ -3,8 +3,10 @@ package com.xjh1994.ad.module.home.activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -27,12 +29,13 @@ import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.squareup.picasso.Picasso;
 import com.xjh1994.ad.R;
-import com.xjh1994.ad.base.BaseTabActivity;
+import com.xjh1994.ad.base.BaseTabLayoutActivity;
+import com.xjh1994.ad.module.home.fragment.HomeFragment;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends BaseTabActivity {
+public class MainActivity extends BaseTabLayoutActivity {
 
     private Toolbar toolbar;
     private AccountHeader headerResult = null;
@@ -43,12 +46,19 @@ public class MainActivity extends BaseTabActivity {
         return R.layout.activity_main;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void initViews() {
         super.initViews();
         setSwipeBackEnable(false);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setElevation(0);
         setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public void initData() {
+
     }
 
     @Override
@@ -135,24 +145,14 @@ public class MainActivity extends BaseTabActivity {
 
     @Override
     protected String[] getTitles() {
-        return new String[]{"首页", "工具", "点滴", "我的"};
-    }
-
-    @Override
-    protected int[] getIconUnselectIds() {
-        return new int[]{R.mipmap.ic_home_select, R.mipmap.ic_home_select, R.mipmap.ic_home_select, R.mipmap.ic_home_select};
-    }
-
-    @Override
-    protected int[] getIconSelectIds() {
-        return new int[]{R.mipmap.ic_home_unselect, R.mipmap.ic_home_unselect, R.mipmap.ic_home_unselect, R.mipmap.ic_home_unselect};
+        return new String[]{"首页", "搞笑", "泰国", "公益"};
     }
 
     @Override
     protected void addFragments(ArrayList<Fragment> fragments) {
+        fragments.add(new HomeFragment());
         fragments.add(new Fragment());
-        fragments.add(new Fragment());
-        fragments.add(new Fragment());
+        fragments.add(new HomeFragment());
         fragments.add(new Fragment());
     }
 }

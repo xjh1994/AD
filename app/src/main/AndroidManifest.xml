@@ -13,7 +13,7 @@
         <!--首页-->
         <activity
             android:name=".module.home.activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/CustomMaterialDrawerTheme"
             android:label="@string/app_name" />
 
         <!--登录-->

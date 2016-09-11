@@ -18,6 +18,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="CustomMaterialDrawerTheme" parent="@style/MaterialDrawerTheme">
@@ -26,10 +28,14 @@
         <item name="material_drawer_selected_text">@android:color/white</item>
 
         <!--<item name="android:popupTheme" tools:targetApi="lollipop">@style/AppTheme.PopupOverlay</item>-->
-        <item name="android:actionBarPopupTheme" tools:targetApi="lollipop">@style/AppTheme.PopupOverlay</item>
+        <!--<item name="android:actionBarPopupTheme" tools:targetApi="lollipop">-->
+            <!--@style/AppTheme.PopupOverlay-->
+        <!--</item>-->
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
 </resources>

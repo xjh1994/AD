@@ -8,7 +8,6 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -39,9 +38,6 @@ public abstract class BaseActivity extends MySwipeBackActivity {
     public CustomApplication mApplication;
 
     protected User currentUser = null;
-
-    protected int mScreenWidth;
-    protected int mScreenHeight;
 
     private static final int ACTIVITY_RESUME = 0;
     private static final int ACTIVITY_STOP = 1;
@@ -76,12 +72,6 @@ public abstract class BaseActivity extends MySwipeBackActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         AppManager.getAppManager().addActivity(this);
-
-        //获取当前屏幕宽高
-        DisplayMetrics metric = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metric);
-        mScreenWidth = metric.widthPixels;
-        mScreenHeight = metric.heightPixels;
 
         //Actionbar
 //        ActionBar actionBar = getSupportActionBar();

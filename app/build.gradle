@@ -13,6 +13,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi"
+        }
     }
 
     buildTypes {
@@ -60,6 +64,8 @@ dependencies {
 
     compile 'com.afollestad.material-dialogs:core:0.9.0.1'
     compile 'com.umeng.analytics:analytics:latest.integration'
+
+    compile 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.6'
 }
 
 configurations {
